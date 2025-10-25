@@ -12,7 +12,7 @@ export default function AskTheWeb() {
     setLoading(true);
     setAnswer("");
     try {
-      const res = await fetch("/ask", {
+      const res = await fetch("http://127.0.0.1:8000/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: query }),
